@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>e-Portfolio: Cosmino Lasorsa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ══ NAV ══════════════════════════════════════ -->
+<nav id="main-nav">
+  <a href="#" class="nav-logo" id="nav-logo-btn">Cosmino Lasorsa</a>
+
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#" data-page="about"   class="active">About Me</a></li>
+    <li><a href="#" data-page="career"             >Career</a></li>
+    <li><a href="#" data-page="projects"           >Projects</a></li>
+    <li><a href="#" data-page="service"            >Service</a></li>
+  </ul>
+
+  <div class="nav-right">
+    <label class="theme-toggle" title="Toggle dark mode" aria-label="Toggle dark mode">
+      <input type="checkbox" id="theme-checkbox">
+      <div class="toggle-track">
+        <span class="toggle-icon toggle-icon-moon">🌙</span>
+        <div class="toggle-knob"></div>
+        <span class="toggle-icon toggle-icon-sun">☀️</span>
+      </div>
+    </label>
+    <a href="https://f34315c9-aa13-4fb1-9e6f-880e5b69ddc7.filesusr.com/ugd/1146d3_8d0a105866884809bc5e62682b8bd9c1.pdf"
+       target="_blank" class="nav-resume">Resume ↗</a>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ══ ABOUT ═════════════════════════════════════ -->
+<div id="page-about" class="tab-content active">
+  <section id="about">
+
+    <!-- Left: identity panel -->
+    <div class="hero-left">
+
+      <!-- Name + photo sit side by side inside the banner -->
+      <div class="hero-banner-inner">
+        <div class="hero-banner-text">
+          <div class="hero-eyebrow">e-Portfolio</div>
+          <h1 class="hero-name">Cosmino<br><em>Lasorsa</em></h1>
+          <div class="hero-tags">
+            <div class="hero-tag">Software Solutions Engineer — Thales Australia</div>
+            <div class="hero-tag">Bachelor of Mechanical &amp; Mechatronic Engineering — UTS</div>
+            <div class="hero-tag">Developer of Simulations &amp; Apps</div>
+          </div>
+          <div class="hero-contact">
+            <a href="mailto:cosmino.lasorsa@gmail.com" class="contact-pill">✉ cosmino.lasorsa@gmail.com</a>
+            <a href="tel:+61417623203"                 class="contact-pill">📞 +61 417 623 203</a>
+            <a href="https://www.linkedin.com/in/cosmino-lasorsa/" target="_blank" class="contact-pill">LinkedIn ↗</a>
+            <a href="http://github.com/CosLasor" target="_blank" class="contact-pill">GitHub ↗</a>
+          </div>
+        </div>
+        <img src="assets/profile.jpg" class="hero-image" alt="Cosmino Lasorsa">
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Capabilities -->
+  <div class="section-block">
+    <div class="capabilities-inner">
+      <div class="section-label">What I bring</div>
+      <p class="section-body">Studying Mechanical and Mechatronics engineering while working as a Software engineer has produced a diverse, transferable toolkit. I draw on structured engineering thinking — requirements writing, planning, documentation — and combine it with hands-on software delivery to offer a point of difference in any multi-disciplinary team.</p>
+      <div class="skills-grid">
+        <div class="skills-group">
+          <h3>Technical Skills</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">Flutter</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">Networking</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Node</span>
+            <span class="skill-tag">Postgres</span>
+          </div>
+        </div>
+        <div class="skills-group">
+          <h3>Soft Skills</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Cross-disciplinary Communication</span>
+            <span class="skill-tag">Team Leadership</span>
+            <span class="skill-tag">Self-management</span>
+            <span class="skill-tag">Community Engagement</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ CAREER ════════════════════════════════════ -->
+<div id="page-career" class="tab-content">
+  <div class="page-header" data-title="Career">
+    <div class="section-label">Industry Experience</div>
+    <p>Over my career I have worked in both Systems engineering and Software engineering. This diversity is an advantage I carry forward — each discipline has deepened the others and broadened my professional perspective.</p>
+  </div>
+
+  <div class="cards-section">
+    <div class="cards-grid">
+
+      <div class="card">
+        <div class="card-meta">
+          <div class="card-company">Thales Australia</div>
+          <div class="card-role">Software Solutions Engineer</div>
+          <div class="card-period">July 2022 — Present</div>
+        </div>
+        <div class="card-body">
+          <p>Responsible for research and development into the use of Docker with both Linux and Windows Containers as well as Unreal Engine 5 for collaborative commercial combat applications. Day to day I work alongside engineers of varying experience levels across Thales Australia and Thales Global to deliver high-fidelity training simulations.</p>
+          <h4>Key Achievements</h4>
+          <ul>
+            <li>Completed critical image rendering for a company press release showcasing <a href="https://www.thalesgroup.com/en/news-centre/news-brief/civil-aviation/civil-helicopter/thales-power-its-next-generation-simulators">Unreal Engine capabilities in Thales</a></li>
+            <li>Developed a new Unreal project demonstrating Unreal Engine 5's military combat capability for an annual Defence conference</li>
+            <li>Successfully containersed an in-house simulation application for scalability purposes</li>
+            <li>Fabricated a new environment as a system administrator for the purpose of a simulator technology refresh</li>
+          </ul>
+          <h4>Technologies</h4>
+          <div class="skill-tags">
+            <span class="skill-tag-box">Docker</span>
+            <span class="skill-tag-box">Node</span>
+            <span class="skill-tag-box">Git</span>
+            <span class="skill-tag-box">Linux</span>
+            <span class="skill-tag-box">REST APIs</span>
+            <span class="skill-tag-box">Networking</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-meta">
+          <div class="card-company">Sydney Trains</div>
+          <div class="card-role">Junior Systems Engineer</div>
+          <div class="card-period">February 2020 — July 2020</div>
+        </div>
+        <div class="card-body">
+          <p>Focused on requirements writing and traceability for track circuits and maintenance products — including the Acoustic Bearing Monitor — used across the Sydney metropolitan rail network to assess track health and support maintenance planning.</p>
+          <h4>Key Achievements</h4>
+          <ul>
+            <li>Conducted data analysis on 3,233 of the 7,000+ track circuits within the Sydney Metropolitan region</li>
+            <li>Assisted a senior engineer with requirements writing and tracing across two condition monitoring projects</li>
+          </ul>
+          <h4>Technologies</h4>
+          <div class="skill-tags">
+            <span class="skill-tag-box">Excel</span>
+            <span class="skill-tag-box">Requirements Writing</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ PROJECTS ═══════════════════════════════════ -->
+<div id="page-projects" class="tab-content">
+  <div class="page-header" data-title="Projects">
+    <div class="section-label">Development Work &amp; Academic Projects</div>
+    <p>Throughout University and in my spare time I have worked on a collection of software, simulation, and academic engineering projects. Below are some of the key activities and my key learnings from each.</p>
+  </div>
+
+  <div class="cards-section">
+    <div class="cards-grid">
+
+      <!-- Thready -->
+      <div class="card">
+        <div class="card-meta">
+          <div class="card-company">Thready</div>
+          <div class="card-role">Flutter / NFC Application</div>
+          <div class="card-period">University Capstone</div>
+        </div>
+        <div class="card-body">
+          <p>Developed a Flutter application using NFC technology to help visually impaired users organise and identify clothing items independently.</p>
+          <h4>Key Learnings</h4>
+          <ul>
+            <li>Source control and time management to keep a project stable and eliminate unnecessary rework</li>
+            <li>Extensive practical use of SolidWorks, Arduino and the Flutter SDK</li>
+          </ul>
+          <h4>Technologies</h4>
+          <div class="skill-tags">
+            <span class="skill-tag-box">Flutter</span>
+            <span class="skill-tag-box">Dart</span>
+            <span class="skill-tag-box">NFC</span>
+            <span class="skill-tag-box">Firebase</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hawkes Brew Co. -->
+      <div class="card">
+        <div class="card-meta">
+          <div class="card-company">Hawkes Brew Co.</div>
+          <div class="card-role">Industry Project</div>
+          <div class="card-period">IoT PAR Sensor Array</div>
+        </div>
+        <div class="card-body">
+          <p>Worked within industry to help a brewery leverage CO₂ by-product from brewing batches to optimise a hydroponics growing space.</p>
+          <h4>Key Learnings</h4>
+          <ul>
+            <li>Investing time upfront to resolve team communication boundaries pays dividends throughout a project</li>
+            <li>Hands-on use of Arduino, SolidWorks and the Mosquitto MQTT protocol</li>
+          </ul>
+          <h4>Technologies</h4>
+          <div class="skill-tags">
+            <span class="skill-tag-box">MQTT</span>
+            <span class="skill-tag-box">Arduino</span>
+            <span class="skill-tag-box">SolidWorks</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footy Tipping Plus -->
+      <div class="card">
+        <div class="card-meta">
+          <div class="card-company">Footy Tipping Plus</div>
+          <div class="card-role">Vite Application</div>
+          <div class="card-period">Personal Project</div>
+        </div>
+        <div class="card-body">
+          <p>Developing a modern web application using Vite and React for managing an NRL Football tipping competition where points are awarded based on the odds of the team.</p>
+          <h4>Key Learnings</h4>
+          <ul>
+            <li>Management of personal projects through Git is extremely valuable even in single developer environments</li>
+          </ul>
+          <h4>Technologies</h4>
+          <div class="skill-tags">
+            <span class="skill-tag-box">Vite</span>
+            <span class="skill-tag-box">React</span>
+            <span class="skill-tag-box">JavaScript</span>
+            <span class="skill-tag-box">CSS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dobot Magician -->
+      <div class="card">
+        <div class="card-meta">
+          <div class="card-company">Dobot Magician</div>
+          <div class="card-role">Robotics Project</div>
+          <div class="card-period">Pick &amp; Place</div>
+        </div>
+        <div class="card-body">
+          <p>Programmed a Dobot Magician robotic arm to autonomously pick and place objects using data from an Intel RealSense camera, converting pixel coordinates into real-world coordinates through sensor configuration and coordinate transformation.</p>
+          <h4>Key Learnings</h4>
+          <ul>
+            <li>Structured code and thorough documentation dramatically accelerate debugging and future development</li>
+            <li>In-depth use of MATLAB and Linux with ROS</li>
+          </ul>
+          <h4>Technologies</h4>
+          <div class="skill-tags">
+            <span class="skill-tag-box">ROS</span>
+            <span class="skill-tag-box">MATLAB</span>
+            <span class="skill-tag-box">Linux</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ SERVICE ════════════════════════════════════ -->
+<div id="page-service" class="tab-content">
+  <div class="page-header" data-title="Service">
+    <div class="section-label">Giving Back</div>
+    <p>Service has been a constant thread through my life — from helping run a community volunteering society to staying deeply engaged with the engineering profession through ongoing reading and learning.</p>
+  </div>
+
+  <div class="cards-section">
+    <div class="cards-grid cards-grid--centre-last">
+
+      <div class="card">
+        <div class="card-meta">
+          <div class="card-company">The Big Lift</div>
+          <div class="card-role">Volunteering Society</div>
+        </div>
+        <div class="card-body">
+          <p>The Big Lift focuses on assisting communities in need who cannot obtain the manpower to complete varying tasks of unskilled labour. We conduct service projects within the Sydney metropolitan area and run volunteering trips to regional communities across NSW.</p>
+          <p>In helping run the society I have developed skills in community liaison, logistics coordination, and team leadership — communicating with regional communities to organise town visits and service projects that genuinely make a difference.</p>
+          <h4>Soft Skills</h4>
+          <div class="skill-tags">
+            <span class="skill-tag-box">Problem-Solving</span>
+            <span class="skill-tag-box">Communication</span>
+            <span class="skill-tag-box">Leadership</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-meta">
+          <div class="card-company">Staying Current</div>
+          <div class="card-role">Professional Development</div>
+        </div>
+        <div class="card-body">
+          <p>As a testament to developing myself as an engineer, I regularly read <em>Engineers Australia's Create Digital</em> magazine — a bi-monthly publication covering the latest advances in the profession. It was reading this from a young age that first drew me to Mechatronics engineering.</p>
+          <p>This habit of staying informed shapes how I engage with my work — bringing current industry context into conversations with colleagues and maintaining curiosity across the technical landscape.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-meta">
+          <div class="card-company">Concord Junior Soccer Club</div>
+          <div class="card-role">Sporting Community</div>
+        </div>
+        <div class="card-body">
+          <p>Playing with my local soccer club for the last 17 years has been one of the most formative experiences of my leadership development. Coordinating a team on the field — adapting in real time to challenges, keeping teammates motivated, and sharing responsibility — has directly informed how I approach leadership in engineering environments.</p>
+          <h4>Soft Skills</h4>
+          <div class="skill-tags">
+            <span class="skill-tag-box">Communication</span>
+            <span class="skill-tag-box">Leadership</span>
+            <span class="skill-tag-box">Teamwork</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ FOOTER ═════════════════════════════════════ -->
+<footer>
+  <div class="footer-name">Cosmino Lasorsa</div>
+  <div class="footer-links">
+    <a href="mailto:cosmino.lasorsa@gmail.com">Email</a>
+    <a href="tel:+61417623203">Phone</a>
+    <a href="https://www.linkedin.com/in/cosmino-lasorsa/" target="_blank">LinkedIn</a>
+    <a href="https://f34315c9-aa13-4fb1-9e6f-880e5b69ddc7.filesusr.com/ugd/1146d3_8d0a105866884809bc5e62682b8bd9c1.pdf" target="_blank">Resume</a>
+  </div>
+  <div class="footer-copy">Software Solutions Engineer — Mechanical &amp; Mechatronics Engineering, UTS</div>
+</footer>
+
+
+<script>
+  /* ── DARK MODE ─────────────────────────────────── */
+  const checkbox = document.getElementById('theme-checkbox');
+  const htmlEl   = document.documentElement;
+
+  function applyTheme(dark) {
+    htmlEl.classList.toggle('dark', dark);
+    checkbox.checked = dark;
+  }
+
+  const saved = localStorage.getItem('cl-theme');
+  if (saved) {
+    applyTheme(saved === 'dark');
+  } else {
+    applyTheme(window.matchMedia('(prefers-color-scheme: dark)').matches);
+  }
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    if (!localStorage.getItem('cl-theme')) applyTheme(e.matches);
+  });
+
+  checkbox.addEventListener('change', () => {
+    const isDark = checkbox.checked;
+    applyTheme(isDark);
+    localStorage.setItem('cl-theme', isDark ? 'dark' : 'light');
+  });
+
+  /* ── PAGE NAVIGATION ───────────────────────────── */
+  function showPage(name) {
+    document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('[data-page]').forEach(el => el.classList.remove('active'));
+    const page = document.getElementById('page-' + name);
+    if (page) page.classList.add('active');
+    const link = document.querySelector('[data-page="' + name + '"]');
+    if (link) link.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.getElementById('nav-links').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+  }
+
+  document.querySelectorAll('.nav-links a[data-page]').forEach(a => {
+    a.addEventListener('click', e => { e.preventDefault(); showPage(a.dataset.page); });
+  });
+  document.getElementById('nav-logo-btn').addEventListener('click', e => {
+    e.preventDefault(); showPage('about');
+  });
+
+  /* ── HAMBURGER ─────────────────────────────────── */
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('nav-links').classList.toggle('open');
+    document.getElementById('hamburger').classList.toggle('open');
+  });
+
+  /* ── NAV SCROLL SHADOW ─────────────────────────── */
+  window.addEventListener('scroll', () => {
+    document.getElementById('main-nav').classList.toggle('scrolled', window.scrollY > 10);
+  });
+</script>
+</body>
+</html>
