@@ -43,10 +43,7 @@
 <div id="page-about" class="tab-content active">
   <section id="about">
 
-    <!-- Left: identity panel -->
     <div class="hero-left">
-
-      <!-- Name + photo sit side by side inside the banner -->
       <div class="hero-banner-inner">
         <div class="hero-banner-text">
           <div class="hero-eyebrow">e-Portfolio</div>
@@ -126,7 +123,7 @@
           <ul>
             <li>Completed critical image rendering for a company press release showcasing <a href="https://www.thalesgroup.com/en/news-centre/news-brief/civil-aviation/civil-helicopter/thales-power-its-next-generation-simulators">Unreal Engine capabilities in Thales</a></li>
             <li>Developed a new Unreal project demonstrating Unreal Engine 5's military combat capability for an annual Defence conference</li>
-            <li>Successfully containersed an in-house simulation application for scalability purposes</li>
+            <li>Successfully containerised an in-house simulation application for scalability purposes</li>
             <li>Fabricated a new environment as a system administrator for the purpose of a simulator technology refresh</li>
           </ul>
           <h4>Technologies</h4>
@@ -177,7 +174,6 @@
   <div class="cards-section">
     <div class="cards-grid">
 
-      <!-- Thready -->
       <div class="card">
         <div class="card-meta">
           <div class="card-company">Thready</div>
@@ -201,7 +197,6 @@
         </div>
       </div>
 
-      <!-- Hawkes Brew Co. -->
       <div class="card">
         <div class="card-meta">
           <div class="card-company">Hawkes Brew Co.</div>
@@ -224,7 +219,6 @@
         </div>
       </div>
 
-      <!-- Footy Tipping Plus -->
       <div class="card">
         <div class="card-meta">
           <div class="card-company">Footy Tipping Plus</div>
@@ -247,7 +241,6 @@
         </div>
       </div>
 
-      <!-- Dobot Magician -->
       <div class="card">
         <div class="card-meta">
           <div class="card-company">Dobot Magician</div>
@@ -348,7 +341,6 @@
 
 
 <script>
-  /* ── DARK MODE ─────────────────────────────────── */
   const checkbox = document.getElementById('theme-checkbox');
   const htmlEl   = document.documentElement;
 
@@ -374,7 +366,6 @@
     localStorage.setItem('cl-theme', isDark ? 'dark' : 'light');
   });
 
-  /* ── PAGE NAVIGATION ───────────────────────────── */
   function showPage(name) {
     document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
     document.querySelectorAll('[data-page]').forEach(el => el.classList.remove('active'));
@@ -394,13 +385,11 @@
     e.preventDefault(); showPage('about');
   });
 
-  /* ── HAMBURGER ─────────────────────────────────── */
   document.getElementById('hamburger').addEventListener('click', () => {
     document.getElementById('nav-links').classList.toggle('open');
     document.getElementById('hamburger').classList.toggle('open');
   });
 
-  /* ── NAV SCROLL SHADOW ─────────────────────────── */
   window.addEventListener('scroll', () => {
     document.getElementById('main-nav').classList.toggle('scrolled', window.scrollY > 10);
   });

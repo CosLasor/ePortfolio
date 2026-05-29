@@ -7,7 +7,7 @@
   --border:       #d8d0c4;
   --taupe:        #9a8f82;
   --stone:        #5c5248;
-  --body:         #2e2a26;     /* darker for better light-mode legibility */
+  --body:         #2e2a26;
   --heading:      #1a1714;
   --accent:       #6b8f7e;
   --accent-light: #96b8a8;
@@ -42,23 +42,18 @@ html.dark {
    RESET & BASE
 ══════════════════════════════════════════════ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 html { scroll-behavior: smooth; font-size: 18px; }
 
 body {
   font-family: 'DM Sans', sans-serif;
-  background: var(--bg-alt);   /* matches footer so no colour flash below it */
+  background: var(--bg-alt);
   color: var(--body);
   overflow-x: hidden;
   transition: background 0.3s, color 0.3s;
   font-weight: 400;
 }
 
-/* Page content areas sit on the lighter main background */
-#page-about,
-#page-career,
-#page-projects,
-#page-service {
+#page-about, #page-career, #page-projects, #page-service {
   background: var(--bg);
 }
 
@@ -83,54 +78,33 @@ nav.scrolled { box-shadow: 0 2px 24px var(--shadow); }
 
 .nav-logo {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--heading);
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: color 0.3s;
+  font-size: 1.2rem; font-weight: 600; color: var(--heading);
+  letter-spacing: 0.02em; text-decoration: none;
+  white-space: nowrap; transition: color 0.3s;
 }
 
 .nav-links { display: flex; gap: 0.15rem; list-style: none; }
-
 .nav-links a {
-  text-decoration: none;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--stone);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 0.4rem 0.78rem;
-  border-radius: 2rem;
-  transition: background 0.2s, color 0.2s;
-  white-space: nowrap;
+  text-decoration: none; font-size: 0.8rem; font-weight: 600;
+  color: var(--stone); letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 0.4rem 0.78rem; border-radius: 2rem;
+  transition: background 0.2s, color 0.2s; white-space: nowrap;
 }
-.nav-links a:hover,
-.nav-links a.active { background: var(--accent-pale); color: var(--accent); }
+.nav-links a:hover, .nav-links a.active { background: var(--accent-pale); color: var(--accent); }
 
 .nav-right { display: flex; align-items: center; gap: 0.75rem; flex-shrink: 0; }
 
 .nav-resume {
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--accent);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  text-decoration: none;
-  border: 1.5px solid var(--accent-light);
-  padding: 0.38rem 1rem;
-  border-radius: 2rem;
-  white-space: nowrap;
+  font-size: 0.78rem; font-weight: 600; color: var(--accent);
+  letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none;
+  border: 1.5px solid var(--accent-light); padding: 0.38rem 1rem;
+  border-radius: 2rem; white-space: nowrap;
   transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 .nav-resume:hover { background: var(--accent); color: var(--bg); }
 
 /* ── Dark mode toggle ── */
-.theme-toggle {
-  position: relative; width: 44px; height: 24px;
-  flex-shrink: 0; cursor: pointer;
-}
+.theme-toggle { position: relative; width: 44px; height: 24px; flex-shrink: 0; cursor: pointer; }
 .theme-toggle input { opacity: 0; width: 0; height: 0; position: absolute; }
 .toggle-track {
   position: absolute; inset: 0; border-radius: 999px;
@@ -153,99 +127,98 @@ html.dark .toggle-knob { transform: translateX(20px); }
 
 /* ── Hamburger ── */
 .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
-.hamburger span {
-  display: block; width: 22px; height: 1.5px;
-  background: var(--body); transition: transform 0.3s, opacity 0.3s;
-}
+.hamburger span { display: block; width: 22px; height: 1.5px; background: var(--body); transition: transform 0.3s, opacity 0.3s; }
 .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
 /* ══════════════════════════════════════════════
    HERO / ABOUT
+   — enlarged name, tags, pills and photo
 ══════════════════════════════════════════════ */
 #about {
   display: block;
-  padding-top: 3.6rem;   /* nav offset */
+  padding-top: 3.6rem;
 }
 
-/* Single full-width banner */
 .hero-left {
   display: flex;
   flex-direction: column;
-  align-items: center;       /* centre the inner row horizontally */
-  padding: 3rem 5rem;
+  align-items: center;
+  padding: 4rem 5rem;              /* more vertical breathing room */
   background: var(--bg-alt);
   border-bottom: 1px solid var(--border);
   transition: background 0.3s, border-color 0.3s;
 }
 
-/* Inner row: text on left, photo on right — centred in the banner */
 .hero-banner-inner {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;   /* centre the pair horizontally */
-  gap: 4rem;
+  justify-content: center;
+  gap: 5rem;                       /* wider gap to accommodate bigger photo */
   width: 100%;
-  max-width: 900px;          /* keeps it from spreading too wide on large screens */
+  max-width: 1100px;               /* allow more spread for the larger content */
 }
 
 .hero-banner-text {
-  flex: 0 1 auto;            /* shrink to content width rather than stretching */
+  flex: 0 1 auto;
   min-width: 0;
 }
 
 .hero-eyebrow {
-  font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--accent); font-weight: 600; margin-bottom: 1rem;
+  font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--accent); font-weight: 600; margin-bottom: 1.2rem;
 }
 
+/* ↑ Name: larger clamp range */
 .hero-name {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.6rem, 4.5vw, 4.2rem);
-  font-weight: 300; line-height: 1.1;
-  color: var(--heading); margin-bottom: 1.4rem;
+  font-size: clamp(3.2rem, 6vw, 5.5rem);   /* was clamp(2.6, 4.5vw, 4.2) */
+  font-weight: 300; line-height: 1.05;
+  color: var(--heading); margin-bottom: 1.8rem;
   transition: color 0.3s;
 }
 .hero-name em { font-style: italic; color: var(--stone); }
 
-.hero-tags { display: flex; flex-direction: column; gap: 0.55rem; margin-bottom: 2rem; }
+.hero-tags { display: flex; flex-direction: column; gap: 0.7rem; margin-bottom: 2.4rem; }
 
+/* ↑ Tags: slightly larger text */
 .hero-tag {
-  display: flex; align-items: center; gap: 0.7rem;
-  font-size: 0.88rem; font-weight: 500; color: var(--body);
+  display: flex; align-items: center; gap: 0.8rem;
+  font-size: 1rem;                 /* was 0.88rem */
+  font-weight: 500; color: var(--body);
 }
-.hero-tag::before { content: ''; width: 18px; height: 1.5px; background: var(--accent); flex-shrink: 0; }
+.hero-tag::before { content: ''; width: 20px; height: 1.5px; background: var(--accent); flex-shrink: 0; }
 
-.hero-contact { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+.hero-contact { display: flex; gap: 0.7rem; flex-wrap: wrap; }
 
+/* ↑ Pills: slightly larger */
 .contact-pill {
-  font-size: 0.78rem; font-weight: 500; color: var(--stone);
+  font-size: 0.88rem;              /* was 0.78rem */
+  font-weight: 500; color: var(--stone);
   text-decoration: none; border: 1px solid var(--border);
-  padding: 0.32rem 0.85rem; border-radius: 2rem;
+  padding: 0.4rem 1rem;            /* was 0.32rem 0.85rem */
+  border-radius: 2rem;
   transition: border-color 0.2s, color 0.2s;
 }
 .contact-pill:hover { border-color: var(--accent-light); color: var(--accent); }
 
-/* Profile photo — larger, right-aligned */
+/* ↑ Photo: bigger */
 .hero-image {
-  width: 340px;
-  height: 420px;
+  width: 420px;                    /* was 340px */
+  height: 520px;                   /* was 420px */
   object-fit: cover;
   object-position: center top;
   border-radius: 1rem;
   flex-shrink: 0;
 }
 
-/* hero-right is no longer used but kept as a no-op in case cached */
 .hero-right { display: none; }
-
-/* about-intro / about-title no longer used */
 .about-intro, .about-title { display: none; }
 
 /* ══════════════════════════════════════════════
-   CAPABILITIES SECTION (About page)
+   CAPABILITIES SECTION
 ══════════════════════════════════════════════ */
 .section-block {
   padding: 4rem 5rem;
@@ -253,7 +226,6 @@ html.dark .toggle-knob { transform: translateX(20px); }
   transition: border-color 0.3s;
 }
 
-/* Capabilities inner: description above skills, constrained to 3/4 width, centred */
 .capabilities-inner {
   max-width: 75%;
   margin: 0 auto;
@@ -264,7 +236,6 @@ html.dark .toggle-knob { transform: translateX(20px); }
   color: var(--accent); font-weight: 600; margin-bottom: 0.8rem;
 }
 
-/* section-title is hidden — only section-label remains as the header */
 .section-title { display: none; }
 
 .section-body {
@@ -284,51 +255,45 @@ html.dark .toggle-knob { transform: translateX(20px); }
 
 .skill-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 
+/* About page rounded pills */
 .skill-tag {
   font-size: 0.82rem; font-weight: 500;
   background: var(--bg-alt); border: 1px solid var(--border);
   color: var(--body); padding: 0.3rem 0.78rem; border-radius: 2rem;
+  cursor: default;
   transition: background 0.2s, border-color 0.2s, color 0.2s;
 }
+.skill-tag:hover { background: var(--accent-pale); border-color: var(--accent-light); color: var(--accent); }
 
+/* Card technology tags */
 .skill-tag-box {
   font-size: 0.82rem; font-weight: 500;
   background: var(--bg); border: 1px solid var(--border);
   color: var(--body); padding: 0.3rem 0.78rem; border-radius: 2rem;
   transition: background 0.2s, border-color 0.2s, color 0.2s;
 }
-
-.skill-tag:hover { background: var(--accent-pale); border-color: var(--accent-light); color: var(--accent); }
+.skill-tag-box:hover { background: var(--accent-pale); border-color: var(--accent-light); color: var(--accent); }
 
 /* ══════════════════════════════════════════════
-   PAGE HEADER — centred content
+   PAGE HEADER
 ══════════════════════════════════════════════ */
 .page-header {
   padding: 4.5rem 5rem 3.5rem;
   background: var(--bg-alt);
   border-bottom: 1px solid var(--border);
   position: relative;
-  overflow: visible;           /* allow banner image to breathe */
+  overflow: visible;
   text-align: center;
   transition: background 0.3s, border-color 0.3s;
 }
-
-/* Ghost watermark removed — section-label is now the primary title */
 .page-header::after { display: none; }
 
-/* section-label doubles as the page title inside headers */
 .page-header .section-label {
   font-family: 'DM Sans', sans-serif;
   font-size: clamp(1.6rem, 2.8vw, 2.2rem);
-  font-weight: 600;
-  letter-spacing: 0;
-  text-transform: none;
-  color: var(--accent);
-  margin-bottom: 0.9rem;
-  line-height: 1.25;
+  font-weight: 600; letter-spacing: 0; text-transform: none;
+  color: var(--accent); margin-bottom: 0.9rem; line-height: 1.25;
 }
-
-/* No section-title shown */
 .page-header .section-title { display: none; }
 
 .page-header p {
@@ -338,29 +303,19 @@ html.dark .toggle-knob { transform: translateX(20px); }
   transition: color 0.3s;
 }
 
-/* Banner image sits below the description with padding */
 .header-banner {
-  display: block;
-  width: 100%;
-  max-height: 280px;
-  object-fit: cover;
-  border-radius: 0.75rem;
-  margin: 2rem auto 0;
-  max-width: 900px;            /* constrained so it doesn't feel overwhelming */
+  display: block; width: 100%; max-height: 280px;
+  object-fit: cover; border-radius: 0.75rem;
+  margin: 2rem auto 0; max-width: 900px;
 }
 
 /* ══════════════════════════════════════════════
-   CARDS — 2-column tile grid
+   CARDS
 ══════════════════════════════════════════════ */
 .cards-section { padding: 3.5rem 5rem; }
 
-.cards-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-}
+.cards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
 
-/* When a grid has an odd card at the end, centre it */
 .cards-grid--centre-last .card:last-child:nth-child(odd) {
   grid-column: 1 / -1;
   max-width: calc(50% - 1rem);
@@ -378,7 +333,7 @@ html.dark .toggle-knob { transform: translateX(20px); }
 
 .card-company {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.5rem; font-weight: 600;   /* bold */
+  font-size: 1.5rem; font-weight: 600;
   color: var(--heading); margin-bottom: 0.3rem;
   word-break: break-word; transition: color 0.3s;
 }
@@ -416,6 +371,10 @@ html.dark .toggle-knob { transform: translateX(20px); }
   font-size: 0.78rem; flex-shrink: 0; margin-top: 0.25rem;
 }
 
+/* links inside card body */
+.card-body a { color: var(--accent); text-decoration: underline; }
+.card-body a:hover { color: var(--accent-light); }
+
 /* ══════════════════════════════════════════════
    FOOTER
 ══════════════════════════════════════════════ */
@@ -442,7 +401,6 @@ footer a:hover { color: var(--accent); }
 
 /* ══════════════════════════════════════════════
    TAB SHOW / HIDE
-   Non-about pages get nav-height top offset.
 ══════════════════════════════════════════════ */
 .tab-content { display: none; }
 .tab-content.active { display: block; }
@@ -459,10 +417,7 @@ footer a:hover { color: var(--accent); }
     word-break: break-word; overflow-wrap: break-word;
   }
 
-  /* Hero banner: stack text above photo on mobile */
-  .hero-left {
-    padding: 2rem 1.8rem;
-  }
+  .hero-left { padding: 2rem 1.8rem; }
 
   .hero-banner-inner {
     flex-direction: column;
@@ -470,31 +425,25 @@ footer a:hover { color: var(--accent); }
     gap: 1.5rem;
   }
 
-  .hero-image { width: 100%; height: auto; max-width: 240px; display: block; margin: 0 auto; }
+  .hero-image { width: 100%; height: auto; max-width: 260px; display: block; margin: 0 auto; }
 
-  /* Section padding */
   .section-block,
   .page-header,
   .cards-section { padding-left: 1.8rem; padding-right: 1.8rem; }
 
   .capabilities-inner { max-width: 100%; }
-  .capabilities-desc, .capabilities-skills { flex: none; width: 100%; }
 
   .skills-grid { grid-template-columns: 1fr; }
 
-  /* Cards single column on mobile */
   .cards-grid { grid-template-columns: 1fr; }
   .card { padding: 1.5rem; }
 
-  /* On mobile the grid is already 1-col, so the centred card should be full width */
   .cards-grid--centre-last .card:last-child:nth-child(odd) {
-    max-width: 100%;
-    margin: 0;
+    max-width: 100%; margin: 0;
   }
 
   footer { padding: 2.5rem 1.8rem; flex-direction: column; align-items: flex-start; }
 
-  /* Hamburger */
   .hamburger  { display: flex; }
   .nav-links  { display: none; }
   .nav-resume { display: none; }
